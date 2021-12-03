@@ -3,4 +3,6 @@
     <string name="cycle_count">Cycle count:</string>
     <string name="recursion_count">Recursion count:</string>
     <string name="press_me">Press me</string>
+    <string name="ask_for_a_cat">Ask for a cat</string>
+    <string name="image_of_devil_on_666_count">image of devil on 666 count</string>
 </resources>

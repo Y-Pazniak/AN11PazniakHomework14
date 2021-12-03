@@ -69,7 +69,21 @@
         android:id="@+id/imageview_cute_devil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:contentDescription="@string/image_of_devil_on_666_count" />
+
+    <Button
+        android:id="@+id/buttonCreateKitten"
+        android:text="@string/ask_for_a_cat"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/textviewAboutKitten"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 
 </LinearLayout>

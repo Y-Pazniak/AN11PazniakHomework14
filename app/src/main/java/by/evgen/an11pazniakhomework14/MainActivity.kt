@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         findFibCycle(20) //поиск Фибоначчи в цикле
         findFibRecursion(20) //поиск Фибоначчи рекурсией
         countButton() //настройка кнопки для подсчета к-ва нажатий
+        createAndShowCatButton() //настройка кнопки для создания котиков Барсиков
     }
 
     private fun findFibCycle(countFib: Int) {
@@ -71,6 +72,24 @@ class MainActivity : AppCompatActivity() {
                 )
             }
             countView.text = count.toString()
+        }
+    }
+
+    private fun createAndShowCatButton(){
+        /*В главном окне приложения добавить ещё одну кнопку и текстовые поля, по нажатию на кнопку необходимо
+         генерировать объект data класса и все имеющиеся поля класса выводить в текстовое поле. По каждому нажатию
+         необходимо сгенерировать и отобразить новый объект.*/
+        val buttonCat: Button = findViewById(R.id.buttonCreateKitten)
+        val catTextView = findViewById<TextView>(R.id.textviewAboutKitten)
+        buttonCat.setOnClickListener{
+            val newBarsik: CatDataClass = createNewBarsik()
+            var aboutCat = newBarsik.toString()
+            aboutCat = aboutCat.plus("\nName: " + newBarsik.name + "\n")
+            aboutCat = aboutCat.plus("Have bushy mustaches? " + newBarsik.haveMustaches + "\n")
+            aboutCat = aboutCat.plus("Makes relaxing purrr? " + newBarsik.makesPurrr + "\n")
+            aboutCat = aboutCat.plus("Barsik's color is: " + newBarsik.color + "\n")
+            aboutCat = aboutCat.plus("Usual count of Barsik's paws is: " + newBarsik.countPaws)
+            catTextView.text = aboutCat
         }
     }
 }
