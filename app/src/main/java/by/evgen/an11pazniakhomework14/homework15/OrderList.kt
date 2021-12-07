@@ -4,8 +4,9 @@ object OrderList {
     var listOfDrinks: ArrayList<Spirits> =
         arrayListOf(
             Jorsh(),
-            Vodka("Vodka", 40, 50),
+            Vodka(),
             WhiskeyCola(),
-            Whiskey("Whiskey", 43, 50, Ice()),
+            Whiskey(),
+            WhiteRussian(ice = Ice())
         )
 }
