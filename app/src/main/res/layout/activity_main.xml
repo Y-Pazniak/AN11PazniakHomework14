@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
     <TextView
         android:id="@+id/textview_cycle_title"
@@ -104,21 +104,21 @@
             android:layout_margin="8dp"
             android:text="@string/add" />
 
-        <Button
-            android:id="@+id/buttonPrevious"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="8dp"
-            android:text="@string/previous" />
+<!--        <Button-->
+<!--            android:id="@+id/buttonPrevious"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:text="@string/previous" />-->
 
-        <Button
-            android:id="@+id/buttonNext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="8dp"
-            android:text="@string/next" />
+<!--        <Button-->
+<!--            android:id="@+id/buttonNext"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:text="@string/next" />-->
     </LinearLayout>
 
     <TextView
@@ -134,5 +134,11 @@
         android:layout_gravity="center"
         android:layout_margin="8dp"
         android:text="@string/delete" />
+
+    <TextView
+        android:id="@+id/textViewCatalogContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
 
 </LinearLayout>

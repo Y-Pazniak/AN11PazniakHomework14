@@ -1,4 +1,4 @@
-package by.evgen.an11pazniakhomework14
+package by.evgen.an11pazniakhomework14.old
 
 open class CatNoDataClass(
     val catAge: Int,

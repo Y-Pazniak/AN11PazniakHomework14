@@ -1,4 +1,4 @@
-package by.evgen.an11pazniakhomework14
+package by.evgen.an11pazniakhomework14.old
 
 data class CatDataClass(
     val catAge: Int,
