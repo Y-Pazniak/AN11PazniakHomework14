@@ -128,6 +128,7 @@ class MainActivity : AppCompatActivity() {
             if (OrderList.listOfDrinks.size > 0) {
                 if (isFirstClick) {
                     printAboutCocktail(0)
+                    isFirstClick = false
                 } else {
                     if (iter == 0) {
                         iter = OrderList.listOfDrinks.size - 1
