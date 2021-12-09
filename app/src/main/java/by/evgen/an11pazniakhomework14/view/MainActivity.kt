@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import by.evgen.an11pazniakhomework14.R
 import by.evgen.an11pazniakhomework14.homework15.data.*
+import by.evgen.an11pazniakhomework14.homework15.observer.Editor
+import by.evgen.an11pazniakhomework14.homework15.observer.UpdateDrinksListener
 import by.evgen.an11pazniakhomework14.homework15.util.CatalogClass
 import by.evgen.an11pazniakhomework14.homework15.util.OrderList
 import by.evgen.an11pazniakhomework14.homework15.util.getInfo
@@ -34,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         addNewDrink() //работа кнопки "добавить"
 //        delete() //работа кнопки "удалить
         showCatalog() //функция, заполняющая поле "каталог"
-        printAllInfoFromSingleton()//функция, заполняющая поле "синглтон"
+//        printAllInfoFromSingleton()//функция, заполняющая поле "синглтон"
     }
 
     private fun findFibCycle(countFib: Int) {
@@ -243,12 +245,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun addNewDrink() {
         val addButton: Button = findViewById(R.id.buttonAdd)
+        val testText: TextView = findViewById(R.id.testTextView)
+        val editor: Editor = Editor()
         addButton.setOnClickListener {
             if (iter < catalogClass.spirits.size) { //было немного скучно брать просто первый элемент, поэтому я удалял после добавления
                 OrderList.listOfDrinks.add(catalogClass.spirits[0])
+                editor.eventManager.subscribe("update", UpdateDrinksListener(testText))
+                editor.updateTextView(catalogClass.spirits[0].toString())
                 catalogClass.spirits.removeAt(0)
             }
-            printAllInfoFromSingleton()
+            //printAllInfoFromSingleton()
             showCatalog()
         }
     }
