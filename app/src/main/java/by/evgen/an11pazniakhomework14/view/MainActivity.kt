@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         addNewDrink() //работа кнопки "добавить"
 //        delete() //работа кнопки "удалить
         showCatalog() //функция, заполняющая поле "каталог"
-//        printAllInfoFromSingleton()//функция, заполняющая поле "синглтон"
+        printAllInfoFromSingleton()//функция, заполняющая поле "синглтон"
     }
 
     private fun findFibCycle(countFib: Int) {
@@ -245,13 +245,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun addNewDrink() {
         val addButton: Button = findViewById(R.id.buttonAdd)
-        val testText: TextView = findViewById(R.id.testTextView)
+        val testText: TextView = findViewById(R.id.textViewDrinkResult)
         val editor: Editor = Editor()
+        editor.eventManager.subscribe("update", UpdateDrinksListener(testText))
         addButton.setOnClickListener {
             if (iter < catalogClass.spirits.size) { //было немного скучно брать просто первый элемент, поэтому я удалял после добавления
                 OrderList.listOfDrinks.add(catalogClass.spirits[0])
-                editor.eventManager.subscribe("update", UpdateDrinksListener(testText))
-                editor.updateTextView(catalogClass.spirits[0].toString())
+                editor.updateTextView(catalogClass.spirits[0].name)
                 catalogClass.spirits.removeAt(0)
             }
             //printAllInfoFromSingleton()
