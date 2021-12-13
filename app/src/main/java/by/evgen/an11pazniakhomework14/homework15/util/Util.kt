@@ -5,19 +5,19 @@ import by.evgen.an11pazniakhomework14.old.CatDataClass
 import by.evgen.an11pazniakhomework14.old.InheritCatNoDataClass
 
 fun WhiskeyCola.getInfo() =
-    "name: " + this.name + ", capacity: " + this.volume + ", alcohol: " + this.alco
+    "name: ${this.name}, capacity: ${this.volume }, alcohol: ${this.alco}"
 
 fun Whiskey.getInfo() =
-    "name: " + this.name + ", capacity: " + this.volume + ", alcohol: " + this.alco
+    "name: ${this.name}, capacity: ${this.volume }, alcohol: ${this.alco}"
 
 fun Jorsh.getInfo() =
-    "name: " + this.name + ", capacity: " + this.volume + ", alcohol: " + this.alco
+    "name: ${this.name}, capacity: ${this.volume }, alcohol: ${this.alco}"
 
 fun Vodka.getInfo() =
-    "name: " + this.name + ", capacity: " + this.volume + ", alcohol: " + this.alco
+    "name: ${this.name}, capacity: ${this.volume }, alcohol: ${this.alco}"
 
 fun WhiteRussian.getInfo() =
-    "name: " + this.name + ", capacity: " + this.volume + ", alcohol: " + this.alco
+    "name: ${this.name}, capacity: ${this.volume }, alcohol: ${this.alco}"
 
 val tax = 1.2
 val vodkaPrice = 15

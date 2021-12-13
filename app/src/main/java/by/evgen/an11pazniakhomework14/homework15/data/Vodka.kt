@@ -15,17 +15,9 @@ open class Vodka(
                 field = price
             }
         }
-        get() {
-            return (field * tax).toInt()
-        }
+        get() = (field * tax).toInt()
 
+    override fun drinkAlone() = "You can drink $name alone, it is OK"
 
-
-    override fun drinkAlone(): String {
-        return "You can drink $name alone, it is OK"
-    }
-
-    fun drinkLikeACure(): String {
-        return "You can drink $name like a cure"
-    }
+    fun drinkLikeACure() = "You can drink $name like a cure"
 }

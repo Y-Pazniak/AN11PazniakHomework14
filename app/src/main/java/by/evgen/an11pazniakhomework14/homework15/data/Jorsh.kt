@@ -15,11 +15,7 @@ class Jorsh(
                 field = price
             }
         }
-        get() {
-            return (field * tax).toInt()
-        }
+        get() = (field * tax).toInt()
 
-    fun drinkToFlyAway(): String {
-        return "$name is good chose to fly away from your problems"
-    }
+    fun drinkToFlyAway() = "$name is good chose to fly away from your problems"
 }

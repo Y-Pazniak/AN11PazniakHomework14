@@ -17,7 +17,5 @@ class WhiskeyCola(
         }
 
 
-    fun drinkWithCoworkers(): String {
-        return "Good chose to drink $name with your coworkers"
-    }
+    fun drinkWithCoworkers(): String = "Good chose to drink $name with your coworkers"
 }

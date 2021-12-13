@@ -1,6 +1,5 @@
 package by.evgen.an11pazniakhomework14.homework15.observer
 
-import android.widget.TextView
 import java.util.*
 import kotlin.collections.HashMap
 import kotlin.collections.set

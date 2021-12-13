@@ -10,15 +10,13 @@ class WhiteRussian(name: String = "WhiteRussian", alco: Int = 15, volume: Int = 
                 field = value
             }
         }
-        get() {
-            return (field * tax).toInt()
-        }
+        get() = (field * tax).toInt()
+    private var containsIce = false
 
-    override fun drinkAlone(): String {
-        return "You should not drink $name alone, better to share it with girls"
-    }
 
-    fun drinkToFeelAwesome(): String {
-        return "Drink $name makes you feel awesome"
-    }
+    override fun drinkAlone() = "You should not drink $name alone, better to share it with girls"
+
+    fun drinkToFeelAwesome() = "Drink $name makes you feel awesome"
+
+    fun addIce() {containsIce = true}
 }
